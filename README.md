@@ -1,7 +1,4 @@
-<h1> Farm Application:</h1>
-Our group has created a dashboard for our automated drone farm application.This application also depicts the movement of the drone in a farm.
 
-<br>
 
 
 

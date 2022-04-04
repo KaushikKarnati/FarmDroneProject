@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="rootLayout" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1072.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar fx:id="menuBar" style="-fx-background-color: #eeeeee;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="fileMenuDropDown" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="helpMenuDropDown" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+       <SplitPane fx:id="leftRightSplitPane" dividerPositions="0.29797979797979796" prefHeight="360.0" prefWidth="400.0" BorderPane.alignment="BOTTOM_CENTER">
+        <items>
+
+            <AnchorPane fx:id="leftAnchorPane" minHeight="50.0" minWidth="0.0" prefHeight="160.0" prefWidth="415.0">
+                <Label alignment="TOP_LEFT" layoutX="200" layoutY="450" prefHeight="500" prefWidth="100" style="-fx-background-color: #eeeeee;" text="Visualisation Part" textFill="#2e2e2e" />
+                <children>
+                    <SplitPane fx:id="topBottomSplitPane" dividerPositions="0.7132459970887919" layoutX="20.0" layoutY="50.0" orientation="VERTICAL" prefHeight="369.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <items>
+                            <AnchorPane minHeight="250.0" minWidth="250.0" prefHeight="455.0" prefWidth="375.0" style="-fx-background-color: #eeeeee;">
+                                <children>
+                                    <TreeView fx:id="treeView" layoutX="23.0" layoutY="37.0" prefHeight="245.0" prefWidth="132.0" style="-fx-background-color: #2e2e2e;" />
+                                    <GridPane layoutX="192.0" layoutY="300.0" prefHeight="182.0" prefWidth="237.0">
+                                        <columnConstraints>
+                                            <ColumnConstraints fx:id="gridPane" hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="82.72634887695312" />
+                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.71942138671875" minWidth="10.0" prefWidth="117.27365112304688" />
+                                        </columnConstraints>
+                                        <rowConstraints>
+                                            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                        </rowConstraints>
+                                        <children>
+                                            <Label text="Name/ID" textFill="#2e2e2e">
+                                                <GridPane.margin>
+                                                    <Insets />
+                                                </GridPane.margin>
+                                            </Label>
+                                            <Label text="Position (x, y)" textFill="#2e2e2e" GridPane.rowIndex="1" />
+                                            <Label text="Size (L,W,H)" textFill="#2e2e2e" GridPane.rowIndex="2" />
+                                            <Label text="Price" textFill="#2e2e2e" GridPane.rowIndex="3" />
+                                            <Label text="Purchase Price" textFill="#2e2e2e" GridPane.rowIndex="4" />
+                                            <Label text="Market Value" textFill="#2e2e2e" GridPane.rowIndex="5" />
+                                            <TextField fx:id="nameTextField" style="-fx-background-color: ##2e2e2e;" GridPane.columnIndex="1">
+                                                <GridPane.margin>
+                                                    <Insets />
+                                                </GridPane.margin>
+                                            </TextField>
+                                            <TextField fx:id="priceTextField" style="-fx-background-color: #daf2ed;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                            <TextField fx:id="purchasePriceTextField" disable="true" style="-fx-background-color: #eeeeee;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                            <TextField fx:id="marketValueTextField" disable="true" style="-fx-background-color: #daf2ed;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                <children>
+                                                    <TextField prefHeight="27.0" prefWidth="63.0" style="-fx-background-color: #b8e7fc;" fx:id="xTextField">
+                                                        <HBox.margin>
+                                                            <Insets right="2.0" />
+                                                        </HBox.margin>
+                                                    </TextField>
+                                                    <TextField fx:id="yTextField" prefHeight="27.0" prefWidth="57.0" style="-fx-background-color: #fffccc;">
+                                                        <HBox.margin>
+                                                            <Insets left="2.0" />
+                                                        </HBox.margin>
+                                                    </TextField>
+                                                </children>
+                                            </HBox>
+                                            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                <children>
+                                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                                        <children>
+                                                            <TextField fx:id="lTextField" style="-fx-background-color: #ceebe5;">
+                                                                <HBox.margin>
+                                                                    <Insets />
+                                                                </HBox.margin>
+                                                            </TextField>
+                                                            <TextField fx:id="wTextField" style="-fx-background-color: #eeeeee;">
+                                                                <HBox.margin>
+                                                                    <Insets />
+                                                                </HBox.margin>
+                                                            </TextField>
+                                                            <TextField fx:id="hTextField" style="-fx-background-color: #eeccee;" />
+                                                        </children>
+                                                    </HBox>
+                                                </children>
+                                            </HBox>
+                                        </children>
+                                    </GridPane>
+                                    <Label alignment="TOP_CENTER" layoutX="70.0" layoutY="15.0" prefHeight="17.0" prefWidth="286.0" style="-fx-background-color: #3e3e3e;" text="Farm Items" textFill="#eeeeee" />
+                                    <ButtonBar layoutX="43.0" layoutY="24.0" prefHeight="69.0" prefWidth="359.0">
+                                        <buttons>
+                                            <Button fx:id="addItemBtn" minWidth="50.0" mnemonicParsing="false" onAction="#handleAddItem" prefHeight="27.0" prefWidth="182.0"  text="Add Item" textFill="#3e3e3e">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font></Button>
+                                        </buttons>
+                                    </ButtonBar>
+                                    <ButtonBar layoutX="33.0" layoutY="64.0" prefHeight="69.0" prefWidth="359.0">
+                                        <buttons>
+                                            <Button fx:id="addItemContainer" mnemonicParsing="false" onAction="#handleAddItemContainer" prefHeight="27.0"  text="Add Item Container">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font></Button>
+                                        </buttons>
+                                    </ButtonBar>
+                                    <ButtonBar layoutX="110.0" layoutY="130.0" prefHeight="34.0" prefWidth="277.0">
+                                        <buttons>
+                                            <Button fx:id="addDroneBtn" minWidth="50.0" mnemonicParsing="false" onAction="#handleAddDrone" prefHeight="27.0"  text="Drone" textFill="#3e3e3e">
+                                                <font>
+                                                    <Font size="11.0" />
+                                                </font></Button>
+                                        </buttons>
+                                    </ButtonBar>
+                                    <ButtonBar layoutX="110.0" layoutY="180.0" prefHeight="34.0" prefWidth="277.0">
+                                        <buttons>
+                                            <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#handleSave" prefHeight="37.0" prefWidth="164.0"  text="Save Item" textFill="#3e3e3e">
+                                                <font>
+                                                    <Font size="11.0" />
+                                                </font></Button>
+                                        </buttons>
+                                    </ButtonBar>
+                                    <ButtonBar layoutX="110.0" layoutY="220.0" prefHeight="34.0" prefWidth="277.0">
+                                        <buttons>
+                                            <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#handleDelete" prefHeight="32.0"  text="Remove Item/Item container" textFill="#3e3e3e">
+                                                <font>
+                                                    <Font size="11.0" />
+                                                </font></Button>
+                                        </buttons>
+                                    </ButtonBar>
+                                </children>
+                            </AnchorPane>
+                            <AnchorPane fx:id="bottomLeftAnchorPane" minHeight="5.0" minWidth="0.0" prefHeight="5.0" prefWidth="375.0" style="-fx-background-color: #eeeeee;">
+
+                                <children>
+                                    <ButtonBar fx:id="droneCommandBtnBar" depthTest="ENABLE" layoutX="20.0" layoutY="20.0" prefHeight="76.0" prefWidth="347.0">
+                                        <buttons>
+                                            <Button fx:id="launchDroneBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"  onAction="#handleLaunchDrone" prefHeight="22.0" prefWidth="164.0" text="Launch Drone">
+                                                <cursor>
+                                                    <Cursor fx:constant="HAND" />
+                                                </cursor>
+                                                <font>
+                                                    <Font size="11.0" />
+                                                </font>
+                                            </Button>
+                                        </buttons>
+                                    </ButtonBar>
+                                    <ButtonBar fx:id="droneCommandBtnBar" depthTest="ENABLE" layoutX="20.0" layoutY="60.0" prefHeight="76.0" prefWidth="347.0">
+                                        <buttons>
+                                            <Button fx:id="launchSimulationBtn" alignment="CENTER" mnemonicParsing="false"  onAction="#handleLaunchSimulation" text="Launch Simulation">
+                                                <cursor>
+                                                    <Cursor fx:constant="HAND" />
+                                                </cursor>
+                                                <font>
+                                                    <Font size="11.0" />
+                                                </font>
+                                            </Button>
+                                        </buttons>
+                                    </ButtonBar>
+                                    <HBox >
+                                        <children>
+                                            <RadioButton fx:id="selectVisitItemToggleBtn" mnemonicParsing="false" onAction="#handleSelectVisitItem"  prefHeight="43.0" prefWidth="141.0"  text="Item/Item Container" textFill="#2e2e2e" toggleGroup="$toggleGroup1">
+                                                <toggleGroup>
+                                                    <ToggleGroup fx:id="toggleGroup1" />
+                                                </toggleGroup>
+                                                <font>
+                                                    <Font size="11.0" />
+                                                </font>
+                                            </RadioButton>
+                                        </children>
+                                    </HBox>
+                                    <HBox layoutX="20.0" layoutY="20.0" >
+                                        <children>
+                                            <RadioButton fx:id="selectScanFarmToggleBtn" mnemonicParsing="false" onAction="#handleSelectScanFarm" prefHeight="43.0" prefWidth="141.0" selected="true"  text="Scan Farm" textFill="#2e2e2e" toggleGroup="$toggleGroup1">
+                                                <font>
+                                                    <Font size="11.0" />
+                                                </font>
+                                            </RadioButton>
+                                        </children>
+                                    </HBox>
+                                </children>
+                            </AnchorPane>
+                        </items>
+                    </SplitPane>
+                </children>
+            </AnchorPane>
+            <AnchorPane fx:id="visualPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="805.0" minWidth="605.0" prefHeight="1005.0" prefWidth="605.0" style="-fx-background-color: #eeeeee;" />
+
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

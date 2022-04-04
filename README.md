@@ -4,7 +4,7 @@ Our group has created a dashboard for our automated drone farm application.This 
 <br>
 
 
-<h2>[GitLab Repository for the Project](https://gitlab.cs.uab.edu/skarnati/DroneSmartFarm.git) </h2>
+
 
 <h3>Application Instructions</h3>
 
@@ -25,13 +25,5 @@ We recommend you use IntelliJ when viewing this code or running the project.
 
 Eclipse will most likely work, but may need some tweaking since migrating projects between Eclipse and IntelliJ is often unpredictable.
 
-<h3> Our Team and contribution  </h3>
 
-1.Snigdha Yellapragada : Implemented "Visitor Design Pattern" , Helped in debugging and testing.
-
-2.Neelesh Palaparthi : Implemented "Adapter Design Pattern" , Helped in documentation and testing.
-
-3.Sri Ram Kaushik Karnati : Implemented "Adapter Design Pattern" , Helped in testing and debugging. Helped in setting up GitLab .
-
-4.Tobias O'Leary : Created UML Diagram for group.
 
